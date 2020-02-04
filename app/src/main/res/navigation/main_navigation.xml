@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/formFragment">
+    <fragment
+        android:id="@+id/formFragment"
+        android:name="com.example.fragment_viewmodel_example.FormFragment"
+        android:label="form_fragment"
+        tools:layout="@layout/form_fragment" >
+        <action
+            android:id="@+id/action_formFragment_to_ticketNumberFragment"
+            app:destination="@id/ticketNumberFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:popUpTo="@+id/formFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ticketNumberFragment"
+        android:name="com.example.fragment_viewmodel_example.TicketNumberFragment"
+        android:label="ticket_number_fragment"
+        tools:layout="@layout/ticket_number_fragment" />
+</navigation>
